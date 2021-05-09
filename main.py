@@ -1,5 +1,7 @@
 import socket
 
+from planlekcji.utils import BaseLinks
+
 
 def host_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -10,4 +12,8 @@ def host_ip():
 
 
 if __name__ == '__main__':
-    print('Moje IP:', host_ip())
+    bl = BaseLinks.BaseLinks()              #DZIAŁA BARDZO DOBRZE
+    classes_links = bl.classes_links()      #Też działa świetnie :)
+    # url = "http://plan.ckziu-elektryk.pl/plany/n76.html"
+    # html = requests.get(url).text
+    # print(html)
