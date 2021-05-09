@@ -1,6 +1,7 @@
 import socket
 
 from planlekcji.utils import BaseLinks
+from planlekcji.models import DataRooms
 
 
 def host_ip():
@@ -12,8 +13,11 @@ def host_ip():
 
 
 if __name__ == '__main__':
-    bl = BaseLinks.BaseLinks()              #DZIAŁA BARDZO DOBRZE
-    classes_links = bl.classes_links()      #Też działa świetnie :)
+    dr = DataRooms.DataRoom(1, [DataRooms.OneCell('Adams', '1PTN', 'Matematyka'),
+                                DataRooms.OneCell('Adams', '2PTN', 'Bazy danych')])
+    print(dr)
+    # bl = BaseLinks.BaseLinks()              #DZIAŁA BARDZO DOBRZE
+    # classes_links = bl.classes_links()      #Też działa świetnie :)
     # url = "http://plan.ckziu-elektryk.pl/plany/n76.html"
     # html = requests.get(url).text
     # print(html)
